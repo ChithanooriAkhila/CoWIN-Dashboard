@@ -27,10 +27,10 @@ class CowinDashboard extends Component {
   fetchData = async () => {
     this.setState({isLoading: fetchingConstants.loading})
 
-    const fetchUrl = 'https://apis.ccbp.in/covid-vaccination-data'
-    const response = await fetch(fetchUrl)
+    const vaccinationDataApiUrl = 'https://apis.ccbp.in/covid-vaccination-data'
+    const response = await fetch(vaccinationDataApiUrl)
 
-    if (response.ok) {
+    if (response.ok === true) {
       const data = await response.json()
       const last7DaysVaccinationDetails = data.last_7_days_vaccination.map(
         obj => ({
@@ -87,7 +87,7 @@ class CowinDashboard extends Component {
 
   renderLoader = () => (
     <div data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height={80} width={80} />
+      <Loader type="ThreeDots" color="#000000" height={80} width={80} />
     </div>
   )
 

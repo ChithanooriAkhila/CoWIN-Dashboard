@@ -49,7 +49,7 @@ const VaccinationCoverage = props => {
             }}
           />
           <Bar dataKey="dose1" name="Dose 1" fill="#5a8dee" barSize="20%" />
-          <Bar dataKey="dose2" name="Dose 2" fill="##f54394" barSize="20%" />
+          <Bar dataKey="dose2" name="Dose 2" fill="#f54394" barSize="20%" />
         </BarChart>
       </ResponsiveContainer>
     </>
